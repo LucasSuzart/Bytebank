@@ -1,12 +1,18 @@
 ﻿
-namespace bytebank
+namespace bytebank.Titular
 {
     public class Cliente
     {
 
-        public string cpf;
-        public string nome;
-        public string profissao;
-     
+        public string Cpf { get; set; }
+        public string Nome { get; set; }
+        public string Profissao { get; set; }
+
+        public static int TotalClientesCadastrados { get; set; }
+
+        public Cliente()
+        {
+            TotalClientesCadastrados = TotalClientesCadastrados + 1;
+        }
     }
 }
